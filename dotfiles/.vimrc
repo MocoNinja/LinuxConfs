@@ -3,7 +3,7 @@
 " By Moconinja
 " ----------------------------- "
 " UI, colors and such
- colorscheme darkblue
+ colorscheme koehler
 " ----------------------------- "
 " Formatting, tabs and the likes
  set tabstop=4
