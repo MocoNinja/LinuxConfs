@@ -93,3 +93,7 @@ source $ZSH/oh-my-zsh.sh
 ## Environment Variables
 # No telemetry for dot.net core
 export DOTNET_CLI_TELEMETRY_OPTOUT=true
+
+## Mah Aliases
+# Odoo
+alias odoo="cd /opt/odoo/odoo/ && ./odoo-bin"
