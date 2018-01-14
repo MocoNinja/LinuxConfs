@@ -97,3 +97,5 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=true
 ## Mah Aliases
 # Odoo
 alias odoo="cd /opt/odoo/odoo/ && ./odoo-bin"
+#Convenience
+alias shutdown="shutdown now"
