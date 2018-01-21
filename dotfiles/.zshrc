@@ -6,11 +6,25 @@
 # Path to your oh-my-zsh installation.
   export ZSH=/home/javier/.oh-my-zsh
 
-## Themes
- # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
- ZSH_THEME="robbyrussell"
- # ZSH_THEME="random"
- # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -50,6 +64,21 @@
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+
+###	----------------------------------------------------------- ###
+### ------------------------- Themes -------------------------- ###
+###	----------------------------------------------------------- ###
+
+ # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ ZSH_THEME="robbyrussell"
+ # ZSH_THEME="random"
+ # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+
+###	----------------------------------------------------------- ###
+### ------------------------- Plugins ------------------------- ###
+###	----------------------------------------------------------- ###
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -57,45 +86,29 @@
 
 plugins=(
   git
+  vi-mode
+  mvn
 )
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+###	----------------------------------------------------------- ###
+### ------- Environment Variables, Aliases and such... -------- ###
+###	----------------------------------------------------------- ###
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-## Environment Variables
 # No telemetry for dot.net core
 export DOTNET_CLI_TELEMETRY_OPTOUT=true
-
-## Mah Aliases
-# Odoo
+# Odoo and Gorka
 alias odoo="cd /opt/odoo/odoo/ && ./odoo-bin"
+alias rubriquita="cd /opt/odoo/odoo/addons/openacademy"
 #Convenience
-alias shutdown="shutdown now"
+alias bb="shutdown now"
+#Navigation
+alias gitDotFiles="cd ~/.git/LinuxConfs/dotfiles"
+alias gitDotFilesZSH="cp ~/.zshrc ~/.git/LinuxConfs/dotfiles && cd ~/.git/LinuxConfs/dotfiles"
+
