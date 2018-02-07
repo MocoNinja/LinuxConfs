@@ -81,12 +81,10 @@
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 
 plugins=(
   git
-  vi-mode
+  #vi-mode
   mvn
 )
 
@@ -103,12 +101,15 @@ source $ZSH/oh-my-zsh.sh
 
 # No telemetry for dot.net core
 export DOTNET_CLI_TELEMETRY_OPTOUT=true
+# My GIT* Profiles for easy access
+export GITHUB="https://github.com/MocoNinja/"
+export GITLAB="https://gitlab.com/MocoNinja/"
 # Odoo and Gorka
 alias odoo="cd /opt/odoo/odoo/ && ./odoo-bin"
 alias rubriquita="cd /opt/odoo/odoo/addons/openacademy"
 #Convenience
 alias bb="shutdown now"
 #Navigation
-alias gitDotFiles="cd ~/.git/LinuxConfs/dotfiles"
-alias gitDotFilesZSH="cp ~/.zshrc ~/.git/LinuxConfs/dotfiles && cd ~/.git/LinuxConfs/dotfiles"
-
+alias dirGitDF="cd ~/.git/LinuxConfs/dotfiles"
+alias gitDFCopy="cp ~/.zshrc ~/.git/LinuxConfs/dotfiles"
+alias gitDFBak="cp ~/.zshrc ~/.git/LinuxConfs/dotfiles && cd ~/.git/LinuxConfs/dotfiles"
