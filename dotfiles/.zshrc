@@ -109,7 +109,9 @@ alias odoo="cd /opt/odoo/odoo/ && ./odoo-bin"
 alias rubriquita="cd /opt/odoo/odoo/addons/openacademy"
 #Convenience
 alias bb="shutdown now"
+alias c="clear"
 #Navigation
 alias dirGitDF="cd ~/.git/LinuxConfs/dotfiles"
 alias gitDFCopy="cp ~/.zshrc ~/.git/LinuxConfs/dotfiles"
 alias gitDFBak="cp ~/.zshrc ~/.git/LinuxConfs/dotfiles && cd ~/.git/LinuxConfs/dotfiles"
+
