@@ -110,6 +110,8 @@ alias rubriquita="cd /opt/odoo/odoo/addons/openacademy"
 #Convenience
 alias bb="shutdown now"
 alias c="clear"
+alias springrun="mvn compile && mvn spring-boot:run"
+alias h2="sh ~/.apps/h2/bin/h2.sh"
 #Navigation
 alias dirGitDF="cd ~/.git/LinuxConfs/dotfiles"
 alias gitDFCopy="cp ~/.zshrc ~/.git/LinuxConfs/dotfiles"
