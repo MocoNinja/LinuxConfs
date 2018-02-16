@@ -70,11 +70,11 @@
 ###	----------------------------------------------------------- ###
 
  # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
- ZSH_THEME="robbyrussell"
+ ZSH_THEME="smt"
  # ZSH_THEME="random"
  # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
  # Neat themes
- # sonicradish takashiyoshida robbyrussell agnoste rmortalscumbag smt simonoff Soliah miloshadzic rkj dieter candy jnrowe sunrise
+ # sonicradish takashiyoshida robbyrussell agnoster mortalscumbag smt simonoff Soliah miloshadzic rkj dieter candy jnrowe sunrise
 
 ###	----------------------------------------------------------- ###
 ### ------------------------- Plugins ------------------------- ###
