@@ -113,7 +113,7 @@ alias c="clear"
 alias springrun="mvn compile && mvn spring-boot:run"
 alias h2="sh ~/.apps/h2/bin/h2.sh"
 #Navigation
-alias dirGitDF="cd ~/.git/LinuxConfs/dotfiles"
+alias gitDFDir="cd ~/.git/LinuxConfs/dotfiles"
 alias gitDFCopy="cp ~/.zshrc ~/.git/LinuxConfs/dotfiles"
 alias gitDFBak="cp ~/.zshrc ~/.git/LinuxConfs/dotfiles && cd ~/.git/LinuxConfs/dotfiles"
 
