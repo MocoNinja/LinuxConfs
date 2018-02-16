@@ -73,7 +73,8 @@
  ZSH_THEME="robbyrussell"
  # ZSH_THEME="random"
  # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
+ # Neat themes
+ # sonicradish takashiyoshida robbyrussell agnoste rmortalscumbag smt simonoff Soliah miloshadzic rkj dieter candy jnrowe sunrise
 
 ###	----------------------------------------------------------- ###
 ### ------------------------- Plugins ------------------------- ###
@@ -107,13 +108,14 @@ export GITLAB="https://gitlab.com/MocoNinja/"
 # Odoo and Gorka
 alias odoo="cd /opt/odoo/odoo/ && ./odoo-bin"
 alias rubriquita="cd /opt/odoo/odoo/addons/openacademy"
-#Convenience
+# Convenience
 alias bb="shutdown now"
 alias c="clear"
 alias springrun="mvn compile && mvn spring-boot:run"
 alias h2="sh ~/.apps/h2/bin/h2.sh"
-#Navigation
+# Navigation
 alias gitDFDir="cd ~/.git/LinuxConfs/dotfiles"
 alias gitDFCopy="cp ~/.zshrc ~/.git/LinuxConfs/dotfiles"
 alias gitDFBak="cp ~/.zshrc ~/.git/LinuxConfs/dotfiles && cd ~/.git/LinuxConfs/dotfiles"
-
+# Raspberry
+alias raspScan="nmap -sn 192.168.1.0/24"
