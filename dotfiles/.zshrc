@@ -70,7 +70,7 @@
 ###	----------------------------------------------------------- ###
 
  # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
- ZSH_THEME="smt"
+ ZSH_THEME="rkj"
  # ZSH_THEME="random"
  # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
  # Neat themes
@@ -117,5 +117,7 @@ alias h2="sh ~/.apps/h2/bin/h2.sh"
 alias gitDFDir="cd ~/.git/LinuxConfs/dotfiles"
 alias gitDFCopy="cp ~/.zshrc ~/.git/LinuxConfs/dotfiles"
 alias gitDFBak="cp ~/.zshrc ~/.git/LinuxConfs/dotfiles && cd ~/.git/LinuxConfs/dotfiles"
+# System
+alias reload="c; echo Recargando configuración de SHELL...; source ~/.zshrc"
 # Raspberry
 alias raspScan="nmap -sn 192.168.1.0/24"
