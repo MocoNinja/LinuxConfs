@@ -167,6 +167,7 @@
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
   <keyboard>
+	<!--		KEYBOARD CONFIG			-->
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
     <keybind key="W-h">
@@ -284,6 +285,19 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
+	<!-- Keybindings for pseudo-tiling -->
+	<keybind key="C-l">
+		<action name="GrowToEdge"><direction>east</direction></action>
+	</keybind>
+	<keybind key="C-h">
+		<action name="GrowToEdge"><direction>west</direction></action>
+	</keybind>
+	<keybind key="C-k">
+		<action name="GrowToEdge"><direction>north</direction></action>
+	</keybind>
+	<keybind key="C-j">
+		<action name="GrowToEdge"><direction>south</direction></action>
+	</keybind>
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
@@ -314,27 +328,6 @@
         </finalactions>
       </action>
     </keybind>
-    <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-S-Right">
-      <action name="DirectionalCycleWindows">
-        <direction>right</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Left">
-      <action name="DirectionalCycleWindows">
-        <direction>left</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Up">
-      <action name="DirectionalCycleWindows">
-        <direction>up</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Down">
-      <action name="DirectionalCycleWindows">
-        <direction>down</direction>
-      </action>
-    </keybind>
     <!-- Keybindings for running applications -->
     <keybind key="W-e">
       <action name="Execute">
@@ -345,10 +338,11 @@
         <command>ranger</command>
       </action>
     </keybind>
-	<keybind key="C-A-F11">
+	<keybind key="C-A-W-F11">
 		<action name="Reconfigure"/>
 	</keybind>
   </keyboard>
+	<!--		MOUSE	 CONFIG			-->
   <mouse>
     <dragThreshold>1</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
