@@ -5,5 +5,5 @@ cp .zshrc ~/
 echo "Copiando configuración de vim..."
 cp .vimrc ~/
 echo "Copiando configuración de OpenBox..."
-cp rc.xml ~/.config/openbox
+cp rc.xml ~/.config/openbox/rc.xml
 echo "Copia de archivos de configuración finalizada!"
