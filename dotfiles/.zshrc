@@ -100,6 +100,8 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# JAVA
+export JAVA_HOME="/opt/java/jdk1.8.0_161/"
 # No telemetry for dot.net core
 export DOTNET_CLI_TELEMETRY_OPTOUT=true
 # My GIT* Profiles for easy access
@@ -109,6 +111,8 @@ export GITLAB="https://gitlab.com/MocoNinja/"
 alias odoo="cd /opt/odoo/odoo/ && ./odoo-bin"
 alias rubriquita="cd /opt/odoo/odoo/addons/openacademy"
 # Convenience
+alias reboot="systemctl reboot"
+alias shutdown="systemctl shutdown now"
 alias bb="shutdown now"
 alias c="clear"
 alias springrun="mvn compile && mvn spring-boot:run"
@@ -118,6 +122,9 @@ alias gitDFDir="cd ~/.git/LinuxConfs/dotfiles"
 alias gitDFCopy="cp ~/.zshrc ~/.git/LinuxConfs/dotfiles"
 alias gitDFBak="cp ~/.zshrc ~/.git/LinuxConfs/dotfiles && cd ~/.git/LinuxConfs/dotfiles"
 # System
-alias reload="c; echo Recargando configuración de SHELL...; source ~/.zshrc"
+alias reload="clear; echo Recargando configuración de SHELL...; source ~/.zshrc"
 # Raspberry
 alias raspScan="nmap -sn 192.168.1.0/24"
+alias raspSSH="ssh pi@192.168.1.110"
+
+###	----------------------------------------------------------- ###
