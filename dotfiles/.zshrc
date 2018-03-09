@@ -102,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 
 # JAVA
 export JAVA_HOME="/opt/java/jdk1.8.0_161/"
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 # No telemetry for dot.net core
 export DOTNET_CLI_TELEMETRY_OPTOUT=true
 # My GIT* Profiles for easy access
