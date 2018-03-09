@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- ******************************************************************************************************** -->
 <!--																										  -->
 <!--									 MocoNinja's Custom Openbox's rc.xml								  -->
 <!--																										  -->
 <!-- ******************************************************************************************************** -->
-
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
@@ -30,7 +28,7 @@
     <policy>Smart</policy>
     <!-- Whether to place windows in the center of the free area found or the top left corner -->
     <center>yes</center>
-	<!--
+    <!--
 		With Smart placement on a multi-monitor system, new windows are tried to be placed on:
 			- 'Any'     ->		any monitor
 			- 'Mouse'   ->		monitor with the mouse	
@@ -38,7 +36,7 @@
 			- 'Primary' ->		primary monitor
 	-->
     <monitor>Primary</monitor>
-	<!--
+    <!--
 		Openbox considers the primary monitor where popup dialogs should be placed. Values are:
 			- Number	->		a particular monitor (any index FROM 1)
 			- 'Mouse'	->		where the mouse is
@@ -47,7 +45,7 @@
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>Vertex-Maia-Dark</name>
+    <name>Numix</name>
     <!--
       Available characters are NDSLIMC, each can occur at most once. Options:
 		N: window icon
@@ -61,7 +59,7 @@
     <titleLayout>CIMLSDN</titleLayout>
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
-	<!--
+    <!--
 		Fonts used in several places:
 			- name		->		Font to be used
 			- size		->		Size in points
@@ -106,28 +104,28 @@
     </font>
   </theme>
   <desktops>
-	<!--
+    <!--
 		These are the defaults used at startup. They are used when there are no other values saved or set by other apps
 	-->
     <number>10</number>
     <firstdesk>1</firstdesk>
-	<!--
+    <!--
 		Can be named like this:
 			<name>name for desktop 1 </name>
 			...
 	-->
     <names>
-		<name>Main</name>
-		<name>Aux</name>
+      <name>Main</name>
+      <name>Aux</name>
     </names>
-	<!-- Miliseconds to show the popup for when switching desktops. 0 disables the popup -->
+    <!-- Miliseconds to show the popup for when switching desktops. 0 disables the popup -->
     <popupTime>0</popupTime>
   </desktops>
   <resize>
     <drawContents>yes</drawContents>
     <!-- 'Always', 'Never', or 'Nonpixel' (xterms and such) -->
     <popupShow>Nonpixel</popupShow>
-	<!-- 'Center', 'Top', or 'Fixed' -->
+    <!-- 'Center', 'Top', or 'Fixed' -->
     <popupPosition>Center</popupPosition>
     <popupFixedPosition>
       <x>10</x>
@@ -167,7 +165,7 @@
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
   <keyboard>
-	<!--		KEYBOARD CONFIG			-->
+    <!--		KEYBOARD CONFIG			-->
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
     <keybind key="W-h">
@@ -285,19 +283,27 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
-	<!-- Keybindings for pseudo-tiling -->
-	<keybind key="C-l">
-		<action name="GrowToEdge"><direction>east</direction></action>
-	</keybind>
-	<keybind key="C-h">
-		<action name="GrowToEdge"><direction>west</direction></action>
-	</keybind>
-	<keybind key="C-k">
-		<action name="GrowToEdge"><direction>north</direction></action>
-	</keybind>
-	<keybind key="C-j">
-		<action name="GrowToEdge"><direction>south</direction></action>
-	</keybind>
+    <!-- Keybindings for pseudo-tiling -->
+    <keybind key="C-l">
+      <action name="GrowToEdge">
+        <direction>east</direction>
+      </action>
+    </keybind>
+    <keybind key="C-h">
+      <action name="GrowToEdge">
+        <direction>west</direction>
+      </action>
+    </keybind>
+    <keybind key="C-k">
+      <action name="GrowToEdge">
+        <direction>north</direction>
+      </action>
+    </keybind>
+    <keybind key="C-j">
+      <action name="GrowToEdge">
+        <direction>south</direction>
+      </action>
+    </keybind>
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
@@ -338,11 +344,11 @@
         <command>ranger</command>
       </action>
     </keybind>
-	<keybind key="C-A-W-F11">
-		<action name="Reconfigure"/>
-	</keybind>
+    <keybind key="C-A-W-F11">
+      <action name="Reconfigure"/>
+    </keybind>
   </keyboard>
-	<!--		MOUSE	 CONFIG			-->
+  <!--		MOUSE	 CONFIG			-->
   <mouse>
     <dragThreshold>1</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
