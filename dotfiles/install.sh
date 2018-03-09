@@ -1,6 +1,6 @@
 #! /bin/bash
 echo "# --------------------------------------------------- #"
-echo "#	------ Script de respaldo de configuraciones ------ #
+echo "# ------ Script de respaldo de configuraciones ------ #"
 echo "# --------------------------------------------------- #"
 echo "# --------------------------------------------------- #"
 echo "copiando configuraciones..."
@@ -16,7 +16,7 @@ echo "# --------------------------------------------------- #"
 echo "copiando configuración de fuentes..."
 echo "# --------------------------------------------------- #"
 sudo cp local.conf /etc/fonts/local.conf
-cp .XResources ~/
+cp .Xresources ~/
 xrdb -merge ~/.Xresources
 echo "fuentes configuradas..."
 echo "# --------------------------------------------------- #"
