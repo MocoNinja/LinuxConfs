@@ -67,38 +67,38 @@
 			- slant		->		'italic' or 'normal'
 	-->
     <font place="ActiveWindow">
-      <name>Ubuntu Medium</name>
-      <size>10</size>
+      <name>Fira Sans Condensed Medium</name>
+      <size>11</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
-      <name>Ubuntu Medium</name>
-      <size>10</size>
+      <name>Fira Sans Condensed Medium</name>
+      <size>11</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>Ubuntu Medium</name>
-      <size>10</size>
+      <name>Fira Sans Condensed Medium</name>
+      <size>11</size>
       <weight>normal</weight>
       <slant>normal</slant>
     </font>
     <font place="MenuItem">
-      <name>Ubuntu Medium</name>
-      <size>10</size>
+      <name>Fira Sans Condensed Medium</name>
+      <size>11</size>
       <weight>normal</weight>
       <slant>normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Ubuntu Medium</name>
-      <size>10</size>
+      <name>Fira Sans Condensed Medium</name>
+      <size>11</size>
       <weight>bold</weight>
       <slant>normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Ubuntu Medium</name>
-      <size>10</size>
+      <name>Fira Sans Condensed Medium</name>
+      <size>11</size>
       <weight>bold</weight>
       <slant>normal</slant>
     </font>
@@ -115,8 +115,18 @@
 			...
 	-->
     <names>
-      <name>Main</name>
-      <name>Aux</name>
+<!--
+       <name>Main</name>
+      <name>Aux 1<name>
+	  <name>Aux 2</name>
+	  <name>Aux 3</name>
+	  <name>Aux 4</name>
+      <name>Aux 5</name>
+      <name>Image</name>
+      <name>Audio</name>
+      <name>Video</name> 
+	  <name>Chat</name>
+-->
     </names>
     <!-- Miliseconds to show the popup for when switching desktops. 0 disables the popup -->
     <popupTime>0</popupTime>
@@ -343,9 +353,6 @@
         </startupnotify>
         <command>ranger</command>
       </action>
-    </keybind>
-    <keybind key="C-A-W-F11">
-      <action name="Reconfigure"/>
     </keybind>
   </keyboard>
   <!--		MOUSE	 CONFIG			-->
