@@ -100,28 +100,40 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# JAVA
+# PROGRAMMING
+## JAVA
 export JAVA_HOME="/opt/java/jdk1.8.0_161/"
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel' 
-# C#
-# No telemetry for dot.net core
+## C#
+### No telemetry for dot.net core
 export DOTNET_CLI_TELEMETRY_OPTOUT=true
-# Fix Shitty Monodevelop
+### Fix Shitty Monodevelop
 alias monodevelop="unset KDE_SESSION_VERSION && unset GNOME_DESKTOP_SESSION_ID && unset MATE_DESKTOP_SESSION_ID && monodevelop &"
-# My GIT* Profiles for easy access
+
+# GIT
+## My GIT* Profiles for easy access
 export GITHUB="https://github.com/MocoNinja/"
 export GITLAB="https://gitlab.com/MocoNinja/"
+
 # Convenience
+## System & Shell
 alias reboot="systemctl reboot"
 alias shutdown="systemctl shutdown now"
-alias bb="shutdown now"
+alias bb="systemctl shutdown now"
 alias c="clear"
-alias springrun="mvn compile && mvn spring-boot:run"
-alias h2="sh ~/.apps/h2/bin/h2.sh"
-# System
 alias reload="clear; echo Recargando configuración de SHELL...; source ~/.zshrc"
-# Raspberry
-alias raspScan="nmap -sn 192.168.1.0/24"
+
+## Raspberry
 alias raspSSH="ssh pi@192.168.1.110"
+
+## Docker
+alias d="sudo docker"
+alias dps="sudo docker ps"
+alias dmayhem="sudo docker system prune --force"
+alias dim="sudo docker image"
+alias dvl="sudo docker volume"
+alias dsv="sudo docker service"
+alias dnd="sudo docker node"
+alias dst="sudo docker stack"
 ###	----------------------------------------------------------- ###
