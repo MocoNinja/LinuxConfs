@@ -106,6 +106,10 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# LOAD EXTERNAL ALIASES
+if [ -f ~/.sensitive_aliases ]; then
+. ~/.sensitive_aliases
+fi
 # PROGRAMMING
 ## JAVA
 ### Path
