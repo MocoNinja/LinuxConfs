@@ -85,11 +85,17 @@
 
 plugins=(
   git
-  #vi-mode
+  vi-mode
   mvn
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# Launch TMUX
+
+if command -v tmux>/dev/null; then
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+fi
 
 ###	----------------------------------------------------------- ###
 ### ------- Environment Variables, Aliases and such... -------- ###
@@ -102,9 +108,11 @@ source $ZSH/oh-my-zsh.sh
 
 # PROGRAMMING
 ## JAVA
-export JAVA_HOME="/opt/java/jdk1.8.0_161/"
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
-export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel' 
+### Path
+# export JAVA_HOME="/opt/java/jdk1.8.0_161/"
+### Fix horrible font rendering
+# export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
+# export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel' 
 ## C#
 ### No telemetry for dot.net core
 export DOTNET_CLI_TELEMETRY_OPTOUT=true
@@ -122,6 +130,7 @@ alias reboot="systemctl reboot"
 alias shutdown="systemctl shutdown now"
 alias bb="systemctl shutdown now"
 alias c="clear"
+alias cls="clear; ls"
 alias reload="clear; echo Recargando configuración de SHELL...; source ~/.zshrc"
 
 ## Raspberry
