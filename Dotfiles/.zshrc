@@ -97,9 +97,9 @@ if command -v tmux>/dev/null; then
   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
 fi
 
-###	----------------------------------------------------------- ###
-### ------- Environment Variables, Aliases and such... -------- ###
-###	----------------------------------------------------------- ###
+###	----------------------------------------------------------- 	###
+### 	------- Environment Variables, Aliases and such... -------- 	###
+###	----------------------------------------------------------- 	###
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -107,46 +107,12 @@ fi
 # For a full list of active aliases, run `alias`.
 
 # LOAD EXTERNAL ALIASES
+## Custom aliases
+if [ -f ~/.aliases ]; then
+. ~/.aliases
+fi
+## Not on source control
 if [ -f ~/.sensitive_aliases ]; then
 . ~/.sensitive_aliases
 fi
-# PROGRAMMING
-## JAVA
-### Path
-# export JAVA_HOME="/opt/java/jdk1.8.0_161/"
-### Fix horrible font rendering
-# export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
-# export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel' 
-## C#
-### No telemetry for dot.net core
-export DOTNET_CLI_TELEMETRY_OPTOUT=true
-### Fix Shitty Monodevelop
-alias monodevelop="unset KDE_SESSION_VERSION && unset GNOME_DESKTOP_SESSION_ID && unset MATE_DESKTOP_SESSION_ID && monodevelop &"
-
-# GIT
-## My GIT* Profiles for easy access
-export GITHUB="https://github.com/MocoNinja/"
-export GITLAB="https://gitlab.com/MocoNinja/"
-
-# Convenience
-## System & Shell
-alias reboot="systemctl reboot"
-alias shutdown="systemctl shutdown now"
-alias bb="systemctl shutdown now"
-alias c="clear"
-alias cls="clear; ls"
-alias reload="clear; echo Recargando configuración de SHELL...; source ~/.zshrc"
-
-## Raspberry
-alias raspSSH="ssh pi@192.168.1.110"
-
-## Docker
-alias d="sudo docker"
-alias dps="sudo docker ps"
-alias dmayhem="sudo docker system prune --force"
-alias dim="sudo docker image"
-alias dvl="sudo docker volume"
-alias dsv="sudo docker service"
-alias dnd="sudo docker node"
-alias dst="sudo docker stack"
 ###	----------------------------------------------------------- ###

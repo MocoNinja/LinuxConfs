@@ -1,0 +1,29 @@
+# PROGRAMMING
+## JAVA
+### Path
+# export JAVA_HOME="/opt/java/jdk1.8.0_161/"
+### Fix horrible font rendering
+# export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
+# export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel' 
+## C#
+### No telemetry for dot.net core
+export DOTNET_CLI_TELEMETRY_OPTOUT=true
+### Fix Shitty Monodevelop
+alias monodevelop="unset KDE_SESSION_VERSION && unset GNOME_DESKTOP_SESSION_ID && unset MATE_DESKTOP_SESSION_ID && monodevelop &"
+
+# GIT
+## My GIT* Profiles for easy access
+export GITHUB="https://github.com/MocoNinja/"
+export GITLAB="https://gitlab.com/MocoNinja/"
+
+# Convenience
+## System & Shell
+alias reboot="systemctl reboot"
+alias shutdown="systemctl shutdown now"
+alias bb="systemctl shutdown now"
+alias c="clear"
+alias cls="clear; ls"
+alias reload="clear; echo Recargando configuración de SHELL...; source ~/.zshrc"
+
+## Raspberry
+alias raspSSH="ssh pi@192.168.1.110"
