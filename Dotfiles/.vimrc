@@ -4,7 +4,7 @@
 " ----------------------------- "
  set nocompatible
 " UI, colors and such
- colorscheme darkblue
+ colorscheme delek
 " ----------------------------- "
 " Formatting, tabs and the likes
  set tabstop=4
