@@ -1,0 +1,10 @@
+## BASE
+export Code="/mnt/e/Code"
+export Git="/mnt/e/Proyectos"
+export Apache="/var/www/html"
+export WebTemplates="/mnt/e/Code/Templates/Web"
+export SharedPHP="$Git/PHPSERVER/WSL"
+## Confs
+export LinuxConfs="$Git/LinuxConfs"
+export Dotfiles="$LinuxConfs/Dotfiles"
+export _df="Dotfiles"

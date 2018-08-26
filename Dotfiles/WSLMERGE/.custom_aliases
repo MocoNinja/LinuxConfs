@@ -1,0 +1,5 @@
+## Convenience
+alias cls="clear && ls"
+alias reload="source /home/$USER/.bashrc && clear && echo \"Bash config reloaded...\""
+## Typos
+alias bim=vim

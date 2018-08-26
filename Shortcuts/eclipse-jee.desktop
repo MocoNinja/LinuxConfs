@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Eclipse JEE
-Comment=Most popular Java IDE
-Exec=/opt/eclipse-oxygen-jee/eclipse
-Icon=/opt/eclipse-oxygen-jee/icon.xpm
-Type=Application
-StartupNotify=true
-Categories=JAVA;Development;IDE;
-MimeType=text/plain;inode/directory;

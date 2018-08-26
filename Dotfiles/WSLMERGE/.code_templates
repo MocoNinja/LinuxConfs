@@ -1,0 +1,27 @@
+## This assumes that my .dirs are working
+## Hence the checking for minimal repercusions
+## and l33t b4sh scr1pt1ng sk1llz improvement
+
+function error_exists()
+{
+    if [ ! -e /home/$USER/.dirs ]; then
+        echo "true"
+    else
+        echo "false"
+    fi
+}
+
+function jquery_only()
+{
+    error=$(error_exists)
+    echo "Error status is: $error"
+    if [ "$error" == "true" ]; then
+        echo "ERROR: NO DIRS"
+        return 1
+    fi
+    echo "Creating template for a jquery project..."
+}
+
+## Exporting to call
+
+alias _tpl_jq="jquery_only"
