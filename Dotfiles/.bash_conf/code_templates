@@ -4,7 +4,7 @@
 
 function error_exists()
 {
-    if [ ! -e /home/$USER/.dirs ]; then
+    if [ ! -e /home/$USER/.bash_config/dirs ]; then
         echo "true"
     else
         echo "false"
@@ -22,6 +22,18 @@ function jquery_only()
     echo "Creating template for a jquery project..."
 }
 
+function bs4_jq()
+{
+
+    error=$(error_exists)
+    echo "Error status is: $error"
+    if [ "$error" == "true" ]; then
+        echo "ERROR: NO DIRS"
+        return 1
+    fi
+    echo "Creating template for basic frontend..."
+}
 ## Exporting to call
 
 alias _tpl_jq="jquery_only"
+alias _tpl_full="bs4_jq"

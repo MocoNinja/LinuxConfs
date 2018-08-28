@@ -1,11 +1,6 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) for examples
 
-# Start tmux if installed and not running
-if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-fi
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -61,9 +56,10 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$'
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='🤷🤷JaviPutoAmo🤷🤷 ~>'
 fi
 unset color_prompt force_color_prompt
 
@@ -100,15 +96,6 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -118,4 +105,29 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
+fi
+
+## Include custom dirs
+if [ -f /home/$USER/.bash_conf/dirs ]; then 
+    . /home/$USER/.bash_conf/dirs
+fi
+## Include custom aliases
+if [ -f /home/$USER/.bash_conf/custom_aliases ]; then
+    source /home/$USER/.bash_conf/custom_aliases
+fi
+## Include mah templates for code
+if [ -f /home/$USER/.bash_conf/code_templates ]; then
+    source /home/$USER/.bash_conf/code_templates
+fi
+
+## Check if I am running WSL instead of a true BASH OF STEEL
+if [[ `uname -a | grep "Microsoft"` != "" ]]; then
+    echo "It looks like you are using Windows instead of Linux :("
+    echo "Poor devil..."
+    cd "/home/$USER"
+    if [ -f /home/$USER/.bin/scripts/wsl_bootstrap.sh ]; then
+        sh "/home/$USER/.bin/scripts/wsl_bootstrap.sh"
+    else
+        echo "WSL and No script! WTF??"
+    fi
 fi

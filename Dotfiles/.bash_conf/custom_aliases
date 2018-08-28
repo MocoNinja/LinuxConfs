@@ -1,0 +1,18 @@
+## Convenience
+alias c="clear"
+alias cls="clear && ls"
+alias reload="source /home/$USER/.bashrc && clear && echo \"Bash config reloaded...\""
+## Docker
+alias d="sudo docker"
+alias dps="sudo docker ps"
+alias dmayhem="sudo docker system prune --force"
+alias dim="sudo docker image"
+alias dvl="sudo docker volume"
+alias dsv="sudo docker service"
+alias dnd="sudo docker node"
+alias dst="sudo docker stack"
+## Typos
+### Vim
+alias bim="echo Learn to type!;vim"
+alias cim="echo Learn to type!;vim"
+alias mov=mv
