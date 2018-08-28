@@ -4,7 +4,7 @@
 
 function error_exists()
 {
-    if [ ! -e /home/$USER/.bash_config/dirs ]; then
+    if [ ! -f /home/$USER/.bash_conf/dirs ]; then
         echo "true"
     else
         echo "false"
