@@ -11,5 +11,10 @@ for file in $files2install; do
 	ln -s "$dir/$file" "/home/$USER/$file"
 	echo "Giving permissions to $USER..."
 	chown -R $USER:$USER /home/$USER/$file
-	chmod 664 /home/$USER/$file
+	# When applying permissions, play smart, not hard
+	if [ -f /home/$USER/$file ]; then
+		chmod 600 /home/$USER/$file
+	else
+		chmod 700 /home/$USER/$file
+	fi
 done
