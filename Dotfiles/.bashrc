@@ -83,7 +83,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
@@ -110,6 +109,10 @@ fi
 ## Include custom dirs
 if [ -f /home/$USER/.bash_conf/dirs ]; then 
     . /home/$USER/.bash_conf/dirs
+    ## Some vars are dir dependent, so the check is here
+    if [ -f /home/$USER/.bash_conf/vars ]; then
+        source /home/$USER/.bash_conf/vars
+    fi
 fi
 ## Include custom aliases
 if [ -f /home/$USER/.bash_conf/custom_aliases ]; then
