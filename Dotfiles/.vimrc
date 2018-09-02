@@ -3,6 +3,7 @@
 " By Moconinja
 " ----------------------------- "
  set nocompatible
+ set noswapfile
 " UI, colors and such
  colorscheme delek
 " ----------------------------- "
