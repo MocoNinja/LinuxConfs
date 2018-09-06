@@ -122,7 +122,10 @@ fi
 if [ -f /home/$USER/.bash_conf/code_templates ]; then
     source /home/$USER/.bash_conf/code_templates
 fi
-
+## Check if pretty shell is possible
+if [ -f /home/$USER/.bash_conf/shell_css ];then
+    source /home/$USER/.bash_conf/shell_css
+fi
 ## Check if I am running WSL instead of a true BASH OF STEEL
 if [[ `uname -a | grep "Microsoft"` != "" ]]; then
     echo "It looks like you are using Windows instead of Linux :("
