@@ -20,6 +20,7 @@ function jquery_only()
         return 1
     fi
     echo "Creating template for a jquery project..."
+    cp $WebTemplates/WEB-JQ.html page.html
 }
 
 function bs4_jq()
