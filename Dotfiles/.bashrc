@@ -137,4 +137,3 @@ if [[ `uname -a | grep "Microsoft"` != "" ]]; then
         echo "WSL and No script! WTF??"
     fi
 fi
-export PATH="$PATH:/home/javier/.config/composer/vendor/bin"
