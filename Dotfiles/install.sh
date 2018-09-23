@@ -1,6 +1,6 @@
 #! /bin/bash
 
-files2install=".bashrc .vimrc .bash_conf"
+files2install=".bashrc .vimrc .bash_conf .bin"
 dir=$(pwd)
 for file in $files2install; do
 	if [ -f "/home/$USER/$file" ]; then

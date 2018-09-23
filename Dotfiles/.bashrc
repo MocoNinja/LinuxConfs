@@ -58,8 +58,8 @@ fi
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] '
 else
-    #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-    PS1='🤷🤷JaviPutoAmo🤷🤷 ~>'
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+#    PS1='🤷🤷JaviPutoAmo🤷🤷 ~>'
 fi
 unset color_prompt force_color_prompt
 
@@ -137,3 +137,4 @@ if [[ `uname -a | grep "Microsoft"` != "" ]]; then
         echo "WSL and No script! WTF??"
     fi
 fi
+export PATH="$PATH:/home/javier/.config/composer/vendor/bin"
