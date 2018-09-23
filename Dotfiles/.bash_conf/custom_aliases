@@ -11,8 +11,12 @@ alias dvl="sudo docker volume"
 alias dsv="sudo docker service"
 alias dnd="sudo docker node"
 alias dst="sudo docker stack"
+## Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 ## Typos
-### Vim
 alias bim="echo Learn to type!;vim"
 alias cim="echo Learn to type!;vim"
 alias mov=mv
+alias cd..="cd .."

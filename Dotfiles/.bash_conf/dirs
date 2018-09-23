@@ -13,7 +13,7 @@ fi
 export Code="$base_dir/Code"
 export Git="$base_dir/Proyectos"
 export Apache="/var/www/html"
-export WebTemplates="$base_dir/Code/Templates/Web"
+export WebTemplates="$Code/Templates/Web"
 export SharedPHP="$Git/PHPSERVER/WSL"
 ## Confs
 export LinuxConfs="$Git/LinuxConfs"

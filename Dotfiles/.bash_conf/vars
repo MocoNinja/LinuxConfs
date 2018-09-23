@@ -1,1 +1,4 @@
+# PATH
+export·PATH="$PATH:/home/javier/.config/composer/vendor/bin"
+# Lenguajes
 export GOPATH="$Code/GO"
