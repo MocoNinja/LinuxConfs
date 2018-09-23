@@ -1,4 +1,4 @@
 # PATH
-export·PATH="$PATH:/home/javier/.config/composer/vendor/bin"
+export·PATH="$PATH:/home/javier/.config/composer/vendor/bin" 2> /dev/null
 # Lenguajes
 export GOPATH="$Code/GO"
