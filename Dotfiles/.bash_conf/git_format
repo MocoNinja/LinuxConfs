@@ -5,10 +5,10 @@ function git_branch {
 
   if [[ $git_status =~ $on_branch ]]; then
     local branch=${BASH_REMATCH[1]}
-    echo "($branch)"
+    echo -e "$FG_RED""($branch)""$END_FG"
   elif [[ $git_status =~ $on_commit ]]; then
     local commit=${BASH_REMATCH[1]}
-    echo "($commit)"
+    echo -e "$FG_RED""($commit)""$END_FG"
   else
     echo "(Not a git repo)"
   fi
