@@ -90,6 +90,6 @@ if [ "$color_prompt" = yes ]; then
     PS1="$MSG""$FG_BLUE""⏰ ""[""\t""]""$END_FG""$FG_MAGENTA""🔥 "":λ ""$END_FG"
 else
     MSG="$FG_CYAN""+--""$_END_FG""$FG_GREEN""[""$END_FG""$FG_RED"" ""\u ""$END_FG""$FG_BLUE""@""$END_FG""$FG_YELLOW"" ""\h ""$END_FG""$FG_GREEN""]""$END_FG""$FG_CYAN"":----------:""$_END_FG""$FG_MAGENTA""[""\w""]""$END_FG""$FG_CYAN""\n|\n+--""$END_FG"
-    PS1="$MSG""$FG_BLUE"" ""[""\t""]""$END_FG""$FG_MAGENTA"":----------:""$END_FG""\$(git_branch)""$FG_MAGENTA"":----------:""$END_FG""$FG_MAGENTA"" ""λ ""$END_FG"
+    PS1="$MSG""$FG_BLUE"" ""[""\t""]""$END_FG""$FG_MAGENTA"":----------:""$END_FG""\$(git_branch)""$FG_MAGENTA"":----------:""$END_FG""$FG_CYAN""\n|\n+--:""$END_FG""$FG_MAGENTA""""λ ""$END_FG"
 fi
 unset color_prompt force_color_prompt
