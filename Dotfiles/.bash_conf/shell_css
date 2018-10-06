@@ -7,6 +7,6 @@ export BG_RED="\e[41m"
 export BG_BLUE="\e[44m"
 export END_BG="\e[49m"
 ## FOREGROUND
-export BG_GREEN="\e[32m"
-export BG_CYAN="\e[36m"
+export FG_GREEN="\e[32m"
+export FG_CYAN="\e[36m"
 export END_FG="\e[39m"
