@@ -61,6 +61,10 @@ fi
 if [ -f /home/$USER/.bash_conf/shell_css ];then
     source /home/$USER/.bash_conf/shell_css
 fi
+## Pimp up my git
+if [ -f /home/$USER/.bash_conf/git_format ];then
+    source /home/$USER/.bash_conf/git_format
+fi
 ## Check if I am running WSL instead of a true BASH OF STEEL
 if [[ `uname -a | grep "Microsoft"` != "" ]]; then
     echo "It looks like you are using Windows instead of Linux :("
@@ -73,7 +77,7 @@ if [[ `uname -a | grep "Microsoft"` != "" ]]; then
     fi
 fi
 ## PROMPT
-force_color_prompt=yes
+# force_color_prompt=no
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
         color_prompt=yes
@@ -82,8 +86,10 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 if [ "$color_prompt" = yes ]; then
-    PS1="$FG_CYAN$""{debian_chroot:+($debian_chroot)}""\u""$END_FG""@\h:\w\$"
+    MSG="$FG_CYAN""+--""$_END_FG""$FG_GREEN""[""$END_FG""$FG_RED""🤔 ""\u🤷 ""$END_FG""$FG_BLUE""@""$END_FG""$FG_YELLOW""👌 ""\h🐧 ""$END_FG""$FG_GREEN""]""$END_FG""$FG_CYAN"":----------:""$_END_FG""$FG_MAGENTA""[""\w""]""$END_FG""$FG_CYAN""\n|\n+--""$END_FG"
+    PS1="$MSG""$FG_BLUE""⏰ ""[""\t""]""$END_FG""$FG_MAGENTA""🔥 "":λ ""$END_FG"
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    MSG="$FG_CYAN""+--""$_END_FG""$FG_GREEN""[""$END_FG""$FG_RED"" ""\u ""$END_FG""$FG_BLUE""@""$END_FG""$FG_YELLOW"" ""\h ""$END_FG""$FG_GREEN""]""$END_FG""$FG_CYAN"":----------:""$_END_FG""$FG_MAGENTA""[""\w""]""$END_FG""$FG_CYAN""\n|\n+--""$END_FG"
+    PS1="$MSG""$FG_BLUE"" ""[""\t""]""$END_FG""$FG_MAGENTA"":----------:""$END_FG""\$(git_branch)""$FG_MAGENTA"":----------:""$END_FG""$FG_MAGENTA"" ""λ ""$END_FG"
 fi
 unset color_prompt force_color_prompt
