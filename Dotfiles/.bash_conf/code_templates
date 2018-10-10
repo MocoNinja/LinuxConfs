@@ -23,7 +23,7 @@ function jquery_only()
     cp $WebTemplates/WEB-JQ.html page.html
 }
 
-function bs4_jq()
+function jq_bs4()
 {
 
     error=$(error_exists)
@@ -32,9 +32,24 @@ function bs4_jq()
         echo "ERROR: NO DIRS"
         return 1
     fi
-    echo "Creating template for basic frontend..."
+    echo "Creating template for basic frontend (BS4 + JQ)..."
+    cp $WebTemplates/WEB-JQ-BS4.html page.html
+}
+
+function jq_materialize()
+{
+
+    error=$(error_exists)
+    echo "Error status is: $error"
+    if [ "$error" == "true" ]; then
+        echo "ERROR: NO DIRS"
+        return 1
+    fi
+    echo "Creating template for basic frontend (MATERIALIZECSS + JQ)..."
+    cp $WebTemplates/WEB-JQ-MATERIALIZE.html page.html
 }
 ## Exporting to call
 
 alias _tpl_jq="jquery_only"
-alias _tpl_full="bs4_jq"
+alias _tpl_jq_bs4="jq_bs4"
+alias _tpl_jq_material="jq_materialize"
