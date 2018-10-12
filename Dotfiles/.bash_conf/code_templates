@@ -48,8 +48,23 @@ function jq_materialize()
     echo "Creating template for basic frontend (MATERIALIZECSS + JQ)..."
     cp $WebTemplates/WEB-JQ-MATERIALIZE.html page.html
 }
+
+function python_simple()
+{
+
+    error=$(error_exists)
+    echo "Error status is: $error"
+    if [ "$error" == "true" ]; then
+        echo "ERROR: NO DIRS"
+        return 1
+    fi
+    echo "Creating template for basic Python script..."
+    cp $PythonTemplates/simple.py script.py
+}
+
 ## Exporting to call
 
 alias _tpl_jq="jquery_only"
 alias _tpl_jq_bs4="jq_bs4"
 alias _tpl_jq_material="jq_materialize"
+alias _tpl_python_simple="python_simple"

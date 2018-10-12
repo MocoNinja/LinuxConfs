@@ -15,6 +15,7 @@ export Git="$base_dir/Proyectos"
 export Apache="/var/www/html"
 export Templates="$Git/Templates/"
 export WebTemplates="$Templates/Web"
+export PythonTemplates="$Templates/Python"
 export SharedPHP="$Git/PHPSERVER/WSL"
 ## Confs
 export LinuxConfs="$Git/LinuxConfs"
