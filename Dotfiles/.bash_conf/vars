@@ -1,4 +1,7 @@
 # PATH
-export·PATH="$PATH:/home/javier/.config/composer/vendor/bin" 2> /dev/null
+PATH="$PATH":"/sbin/"
 # Lenguajes
 export GOPATH="$Code/GO"
+# Repos
+export GITHUB="https://github.com/MocoNinja/"
+export GITLAB="https://gitlab.com/MocoNinja/"
