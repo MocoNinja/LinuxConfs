@@ -1,5 +1,5 @@
 # PATH
-PATH="$PATH":"/sbin/"
+PATH="$PATH":"/sbin/":"/home/$USER/.bin/scripts"
 # Lenguajes
 export GOPATH="$Code/GO"
 # Repos
