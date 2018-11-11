@@ -5,3 +5,5 @@ export GOPATH="$Code/GO"
 # Repos
 export GITHUB="https://github.com/MocoNinja/"
 export GITLAB="https://gitlab.com/MocoNinja/"
+# Fix Telegram
+FONTCONFIG_FILE=/etc/fonts/
