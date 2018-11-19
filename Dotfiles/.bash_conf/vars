@@ -1,5 +1,3 @@
-# PATH
-PATH="$PATH":"/sbin/":"/home/$USER/.bin/scripts"
 # Lenguajes
 export GOPATH="$Code/GO"
 # Repos
@@ -7,3 +5,8 @@ export GITHUB="https://github.com/MocoNinja/"
 export GITLAB="https://gitlab.com/MocoNinja/"
 # Fix Telegram
 FONTCONFIG_FILE=/etc/fonts/
+# NPM
+NPM_PACKAGES=/home/javier/.npm-packages
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+# PATH
+PATH="$PATH":"$NPM_PACKAGES/bin":"/sbin/":"/home/$USER/.bin/apps":"/home/$USER/.bin/scripts"
