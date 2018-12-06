@@ -53,6 +53,9 @@ fi
 if [ -f /home/$USER/.bash_conf/custom_aliases ]; then
     source /home/$USER/.bash_conf/custom_aliases
 fi
+if [ -f /home/$USER/.bash_conf/one_liners ]; then
+    source /home/$USER/.bash_conf/one_liners
+fi
 ## Include mah templates for code
 if [ -f /home/$USER/.bash_conf/code_templates ]; then
     source /home/$USER/.bash_conf/code_templates
