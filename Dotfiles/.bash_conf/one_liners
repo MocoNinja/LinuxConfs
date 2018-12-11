@@ -2,3 +2,13 @@ cpu_temp()
 {
 	sensors | sed '3!d' | cut -d"+" -f2 | cut -d" " -f1
 }
+
+cpu_speed()
+{
+    lscpu | grep MHz | sed '1!d' | cut -d ":" -f 2 | cut -d "." -f 1 | xargs
+}
+
+cpu_info()
+{
+    echo "TEMP: ""$(cpu_temp)"" SPEED: ""$(cpu_speed)"" MHz"
+}
