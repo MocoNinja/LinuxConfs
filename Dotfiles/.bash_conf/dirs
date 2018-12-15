@@ -12,7 +12,7 @@ fi
 ## BASE
 export Code="$base_dir/Code"
 export Git="$base_dir/Proyectos"
-export Apache="/var/www/html"
+export WebServer="/var/www/html"
 export Templates="$Git/Templates/"
 export WebTemplates="$Templates/Web"
 export PythonTemplates="$Templates/Python"
